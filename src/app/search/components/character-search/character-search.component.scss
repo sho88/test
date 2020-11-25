@@ -1,0 +1,22 @@
+form {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+
+  mat-form-field {
+    margin-right: 10px;
+  }
+
+  button {
+    margin-right: 10px;
+  }
+}
+.characters__results {
+  display: flex;
+  flex-wrap: wrap;
+
+  app-character {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "name": "front-end-tests",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "test": "ng test --watch=true --code-coverage",
+    "lint": "ng lint",
+    "e2e": "ng e2e --port=4300",
+    "rxjs-basic": "ts-node rxjs-examples/basic-examples.ts --p=rxjs-examples/tsconfig.json",
+    "rxjs-adv": "ts-node rxjs-examples/transformation-examples.ts --p=rxjs-examples/tsconfig.json",
+    "test-rxjs": "jest --watch --config=jest.config.rxjs.js",
+    "postinstall": "ngcc"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^10.0.0",
+    "@angular/cdk": "^10.0.0",
+    "@angular/common": "^10.0.0",
+    "@angular/compiler": "^10.0.0",
+    "@angular/core": "^10.0.0",
+    "@angular/forms": "^10.0.0",
+    "@angular/material": "^10.0.0",
+    "@angular/platform-browser": "^10.0.0",
+    "@angular/platform-browser-dynamic": "^10.0.0",
+    "@angular/router": "^10.0.0",
+    "core-js": "^2.5.4",
+    "jest-marbles": "^2.5.1",
+    "rxjs": "6.6.3",
+    "zone.js": "~0.10.3"
+  },
+  "devDependencies": {
+    "@angular-builders/jest": "^10.0.0",
+    "@angular-devkit/build-angular": "~0.1000.0",
+    "@angular/cli": "10.0.0",
+    "@angular/compiler-cli": "^10.0.0",
+    "@angular/language-service": "^10.0.0",
+    "@types/jest": "^26.0.0",
+    "@types/node": "^12.11.1",
+    "codelyzer": "^5.2.2",
+    "jest": "^26.0.0",
+    "jest-preset-angular": "8.1.3",
+    "ts-jest": "^26.0.0",
+    "ts-node": "~7.0.0",
+    "tslint": "~6.1.0",
+    "typescript": "~3.9.5"
+  }
+}

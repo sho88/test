@@ -1,0 +1,19 @@
+<form [formGroup]="searchForm">
+<!--  <mat-form-field>-->
+    <input
+      matInput
+      autocomplete="off"
+      formControlName="name"
+      placeholder="character name">
+<!--  </mat-form-field>-->
+</form>
+
+<mat-progress-bar
+  *ngIf="loading"
+  mode="indeterminate"></mat-progress-bar>
+
+<div class="characters__results">
+  <ng-container *ngFor="let character of (characters$ | async)">
+    <app-character [character]="character"></app-character>
+  </ng-container>
+</div>
