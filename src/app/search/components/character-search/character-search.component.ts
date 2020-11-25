@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { Observable, of } from 'rxjs';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Observable } from 'rxjs';
 
 import { CharacterCard, SearchService } from '../../services/search.service';
 import { debounceTime, distinctUntilChanged, switchMap, tap } from 'rxjs/operators';
