@@ -19,8 +19,10 @@ export class SearchService {
    * has been removed / commented out well.
    */
   /**
-   * this should be a method for this class, as opposed to
-   * a variable for this class, that is constantly declared upon instantiation
+   * this should be a method that belongs to this class, as opposed to
+   * an arrow function declared as a property. Primarily because this an
+   * arrow function would create a new instance of itself upon component
+   * instantiation, which isn't best practice (and may cause performance issues)
    */
   searchForCharacter(name: string): Observable<ICharacterCard[]> {
     return this.http
