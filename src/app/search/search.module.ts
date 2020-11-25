@@ -5,10 +5,9 @@ import { CommonModule } from '@angular/common';
 import { CharacterComponent } from './components/character/character.component';
 import { CharacterSearchComponent } from './components/character-search/character-search.component';
 import { MaterialManifestModule } from '../material-manifest/material-manifest.module';
-import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @NgModule({
-  imports: [ReactiveFormsModule, CommonModule, MaterialManifestModule, MatProgressBarModule],
+  imports: [ReactiveFormsModule, CommonModule, MaterialManifestModule],
   declarations: [CharacterComponent, CharacterSearchComponent],
   exports: [CharacterComponent, CharacterSearchComponent],
 })
