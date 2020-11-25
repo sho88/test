@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
 
-import { CharacterCard, SearchService } from '../../services/search.service';
 import { debounceTime, distinctUntilChanged, switchMap, tap } from 'rxjs/operators';
+import { ICharacterCard } from '../../interfaces/character-card.interface';
+import { SearchService } from '../../services/search.service';
 
 @Component({
   selector: 'app-character-search',
@@ -16,7 +17,7 @@ export class CharacterSearchComponent implements OnInit {
   public loading = false;
 
   // characters made an observable
-  characters$: Observable<CharacterCard[]>;
+  characters$: Observable<ICharacterCard[]>;
 
   constructor(
     private readonly searchService: SearchService,
@@ -25,7 +26,6 @@ export class CharacterSearchComponent implements OnInit {
 
   // ngOnInit has been positioned after the constructor
   public ngOnInit() {
-
     // shorten for the sake of keeping syntax cleaner
     this.searchForm = this.formBuilder.group({
       name: ['', Validators.required]

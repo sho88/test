@@ -1,6 +1,5 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
-
-import { CharacterCard } from '../../services/search.service';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ICharacterCard } from '../../interfaces/character-card.interface';
 
 @Component({
   selector: 'app-character',
@@ -11,5 +10,5 @@ import { CharacterCard } from '../../services/search.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CharacterComponent {
-  @Input() character: CharacterCard;
+  @Input() character: ICharacterCard;
 }

@@ -1,7 +1,7 @@
-import {async, ComponentFixture, TestBed} from '@angular/core/testing';
-import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
-import {CharacterComponent} from './character.component';
+import { CharacterComponent } from './character.component';
 
 describe('CharacterComponent', () => {
   let component: CharacterComponent;
