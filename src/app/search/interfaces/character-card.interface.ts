@@ -1,4 +1,4 @@
-export interface CharacterCard {
+export interface ICharacterCard {
   name: string;
   gender: 'male' | 'female';
 }

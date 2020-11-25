@@ -1,19 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
-import { map, mergeMap, tap } from 'rxjs/operators';
-
-export interface CharacterCard {
-  name: string;
-  gender: 'male' | 'female';
-}
-
-export interface ISWAPIResponse {
-  count: number;
-  next: string;
-  previous: string;
-  results: CharacterCard[];
-}
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+import { ISWAPIResponse } from '../interfaces/swapi.interface';
+import { ICharacterCard } from '../interfaces/character-card.interface';
 
 @Injectable({
   providedIn: 'root',
@@ -32,7 +22,7 @@ export class SearchService {
    * this should be a method for this class, as opposed to
    * a variable for this class, that is constantly declared upon instantiation
    */
-  searchForCharacter(name: string): Observable<CharacterCard[]> {
+  searchForCharacter(name: string): Observable<ICharacterCard[]> {
     return this.http
       .get<ISWAPIResponse>(`${this.baseUrl}people/?search=${name}`)
       .pipe(
